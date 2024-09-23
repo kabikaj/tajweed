@@ -61,7 +61,7 @@ from copy import deepcopy
 from functools import partial
 from argparse import ArgumentParser, FileType
 
-from rasm import rasm
+from rasm_arch import rasm_arch as rasm
 
 
 MYPATH = os.path.abspath(os.path.dirname(__file__))

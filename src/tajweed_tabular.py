@@ -43,7 +43,7 @@ import sys
 import ujson as json
 from argparse import ArgumentParser, FileType
 
-from rasm import rasm
+from rasm_arch import rasm_arch as rasm
 
 # group rules in main categories
 RULES = ['M', 'N', 'SHMS', 'MTHL', 'MTJNS']
@@ -120,7 +120,7 @@ if __name__ == '__main__':
         merged = {':'.join(map(str, i)):{'M':0, 'N':0, 'SHMS':0, 'MTHL':0, 'MTJNS':0} for i in indexes}
         for rule_id, rule_ind, rule_cnt in parsed:
             rule_ind = ':'.join(map(str, rule_ind[:-1]))
-            merged[rule_ind][rule_id] = merged[rule_ind].get(rule_id, 0)+rule_cnt
+            merged[rule_ind][rule_id] = merged[rule_ind].get(rule_id, 0) + rule_cnt
 
     #
     # print csv output
