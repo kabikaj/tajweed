@@ -179,7 +179,7 @@ if __name__ == "__main__":
     df.rename(columns={"qindex": "Quran Index"}, inplace=True)
 
     # reorder columns
-    df = df[list(RULES_DESC.keys())[1:]]
+    df = df[["Quran Index"]+list(RULES_DESC.keys())[1:]]
 
     files = enumerate(df.columns)
 
